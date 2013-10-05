@@ -3,29 +3,29 @@ pl:
     attributes:
       spree/address:
         address1: Adres
-        address2: Adres (c.d.)
+        address2: Adres (kontynuacja)
         city: Miasto
         country: Kraj
         firstname: Imię
         lastname: Nazwisko
         phone: Telefon
-        state: Stan
-        zipcode: Kod Pocztowy
+        state: Województwo
+        zipcode: Kod pocztowy
       spree/country:
         iso: ISO
         iso3: ISO3
-        iso_name: Nazwa ISO
-        name: Nazwa
-        numcode: Kod ISO
+        iso_name: ISO Name
+        name: Name
+        numcode: ISO Code
       spree/credit_card:
         base: 
         cc_type: Typ
         month: Miesiąc
         number: Numer
-        verification_value: Kod weryfikujący
+        verification_value: Verification Value
         year: Rok
       spree/inventory_unit:
-        state: Stan
+        state: State
       spree/line_item:
         price: Cena
         quantity: Ilość
@@ -33,66 +33,66 @@ pl:
         name: Nazwa
         presentation: Prezentacja
       spree/order:
-        checkout_complete: Płatność Zakończona
-        completed_at: Zakończono
-        coupon_code: Kod Rabatu
-        created_at: Data Zamówienia
+        checkout_complete: Zamówienie kompletne
+        completed_at: Wykonano
+        coupon_code: Kod kupony
+        created_at: Order Date
         email: E-Mail Klienta
         ip_address: Adres IP
-        item_total: Łącznie Sztuk
+        item_total: Za produkty
         number: Numer
-        payment_state: Status Płatności
-        shipment_state: Status Dostawy
-        special_instructions: Dodatkowe Instrukcje
+        payment_state: Stan płatności
+        shipment_state: Stan wysyłki
+        special_instructions: Special Instructions
         state: Stan
         total: Łącznie
       spree/order/bill_address:
-        address1: Billing address street
-        city: Billing address city
-        firstname: Billing address first name
-        lastname: Billing address last name
-        phone: Billing address phone
-        state: Billing address state
-        zipcode: Billing address zipcode
+        address1: Adres rozliczeniowy - ulica
+        city: Adres rozliczeniowy - miasto
+        firstname: Adres rozliczeniowy - imię
+        lastname: Adres rozliczeniowy - nazwisko
+        phone: Adres rozliczeniowy - numer telefonu
+        state: Adres rozliczeniowy - województwo
+        zipcode: Adres rozliczeniowy - kod pocztowy
       spree/order/ship_address:
-        address1: Shipping address street
-        city: Shipping address city
-        firstname: Shipping address first name
-        lastname: Shipping address last name
-        phone: Shipping address phone
-        state: Shipping address state
-        zipcode: Shipping address zipcode
+        address1: Adres do wysyłki - ulica
+        city: Adres do wysyłki - miasto
+        firstname: Adres do wysyłki - imię
+        lastname: Adres do wysyłki - nazwisko
+        phone: Adres do wysyłki - telefon
+        state: Adres do wysyłki - stan
+        zipcode: Adres do wysyłki - kod pocztowy
       spree/payment:
         amount: Kwota
       spree/payment_method:
         name: Nazwa
       spree/product:
-        available_on: Dostępny Od
-        cost_currency: Waluta Kosztu
-        cost_price: Cena zakupu
+        available_on: Dostępne od
+        cost_currency: Cost Currency
+        cost_price: Cena hurt
         description: Opis
-        master_price: Cena netto
+        master_price: Podstawowa cena
         name: Nazwa
-        on_hand: Dostępny
-        shipping_category: Kategoria Dostawy
-        tax_category: Kategoria Podatkowa
+        on_hand: Od ręki
+        shipping_category: Kategoria wysyłki
+        tax_category: Kategoria podatku
       spree/promotion:
-        advertise: Reklamuj
+        advertise: Propoguj
         code: Kod
         description: Opis
-        event_name: Nazwa zdarzenia
-        expires_at: Dostępna do
+        event_name: Event Name
+        expires_at: Wygasa w
         name: Nazwa
         path: Ścieżka
-        starts_at: Początek
-        usage_limit: Limit
+        starts_at: Zaczyna się w
+        usage_limit: Usage Limit
       spree/property:
         name: Nazwa
         presentation: Prezentacja
       spree/prototype:
         name: Nazwa
       spree/return_authorization:
-        amount: Ilość
+        amount: Kwota
       spree/role:
         name: Nazwa
       spree/state:
@@ -103,8 +103,8 @@ pl:
         name: Nazwa
       spree/tax_rate:
         amount: Stawka
-        included_in_price: Wliczony w cenę
-        show_rate_in_label: Pokaż stawkę na etykieci
+        included_in_price: Zawarta w cenie
+        show_rate_in_label: Pokaż stawkę w labelu
       spree/taxon:
         name: Nazwa
         permalink: Permalink
@@ -114,16 +114,16 @@ pl:
       spree/user:
         email: Email
         password: Hasło
-        password_confirmation: Potwierdzenie Hasła
+        password_confirmation: Potwierdzenie hasła
       spree/variant:
-        cost_currency: Waluta Kosztu
-        cost_price: Cena zakupu
+        cost_currency: Cost Currency
+        cost_price: Cena hurt
         depth: Głębokość
         height: Wysokość
         price: Cena
         sku: SKU
         weight: Waga
-        width: Szerokość
+        width: Długość
       spree/zone:
         description: Opis
         name: Nazwa
@@ -132,939 +132,977 @@ pl:
         spree/credit_card:
           attributes:
             base:
-              card_expired: 
+              card_expired: Ważność karty wygasła
     models:
       spree/address:
-        few: Adresów
         one: Adres
         other: Adresy
       spree/country:
-        few: Krajów
         one: Kraj
         other: Kraje
       spree/credit_card:
-        few: Kart Kredytowych
-        one: Karta Kredytowa
-        other: Karty Kredytowe
+        one: Karta kredytowa
+        other: Karty kredytowe
       spree/inventory_unit:
-        few: Jednostek Stanu
-        one: Jednostka Stanu
-        other: Jednostki Stanu
-      spree/line_item: 
+        one: Inventory Unit
+        other: Inventory Units
+      spree/line_item:
+        one: Line Item
+        other: Line Items
       spree/order:
-        few: Zamówienia
         one: Zamówienie
         other: Zamówienia
       spree/payment:
-        few: Płatności
         one: Płatność
         other: Płatności
-      spree/payment_method: 
+      spree/payment_method:
+        one: Metoda płatności
+        other: Metody płatności
       spree/product:
-        few: Przedmioty
-        one: Przedmiot
-        other: Przedmioty
-      spree/promotion: 
+        one: Produkt
+        other: Produkty
+      spree/promotion:
+        one: Promocja
+        other: Promocje
       spree/property:
-        few: Właściwości
         one: Właściwość
         other: Właściwości
-      spree/prototype: 
-      spree/return_authorization: 
+      spree/prototype:
+        one: Prototyp
+        other: Prototypy
+      spree/return_authorization:
+        one: Return Authorization
+        other: Return Authorizations
       spree/role:
         one: Rola
         other: Role
-      spree/shipment: 
-      spree/shipping_category: 
-      spree/shipping_method: 
-      spree/state: 
-      spree/stock_location: 
-      spree/stock_transfer: 
-      spree/tax_category: 
-      spree/tax_rate: 
-      spree/taxon: 
-      spree/taxonomy: 
-      spree/tracker: 
+      spree/shipment:
+        one: Wysłka
+        other: Wysyłki
+      spree/shipping_category:
+        one: Kategoria wysyłki
+        other: Kategorie wysyłki
+      spree/shipping_method:
+        one: Metoda wysyłki
+        other: Metody wysyłki
+      spree/state:
+        one: Stan
+        other: Stany
+      spree/stock_location:
+        one: Lokalizacja zapasów
+        other: Lokalizacje zapasów
+      spree/stock_transfer:
+        one: Transfer zapasów
+        other: Transfery zapasów
+      spree/tax_category:
+        one: Kategoria podatku
+        other: Kategorie podatku
+      spree/tax_rate:
+        one: Stawka podatku
+        other: Stawki podatku
+      spree/taxon:
+        one: Podklasa
+        other: Podklasy
+      spree/taxonomy:
+        one: Klasa
+        other: Klasy
+      spree/tracker:
+        one: Lokalizator
+        other: Lokalizatory
       spree/user:
         one: Użytkownik
         other: Użytkownicy
       spree/variant:
         one: Wariant
         other: Warianty
-      spree/zone: 
+      spree/zone:
+        one: Strefa
+        other: Strefy
   devise:
     confirmations:
-      confirmed: Twoje konto zostało pomyślnie potwierdzone. Jesteś już zalogowany/a.
-      send_instructions: W ciągu najbliższych kilku minut otrzymasz e-maila ze wskazówkami dotyczącymi potwierdzenia konta.
+      confirmed: Your account was successfully confirmed. You are now signed in.
+      send_instructions: You will receive an email with instructions about how to confirm your account in a few minutes.
     failure:
-      inactive: 
-      invalid: 
-      invalid_token: 
-      locked: 
-      timeout: 
-      unauthenticated: 
-      unconfirmed: 
+      inactive: Twoje konto nie zostało jeszcze aktywowane.
+      invalid: Błędny adres email lub wpisane hasło.
+      invalid_token: Invalid authentication token.
+      locked: Your account is locked.
+      timeout: Your session expired, please sign in again to continue.
+      unauthenticated: You need to sign in or sign up before continuing.
+      unconfirmed: You have to confirm your account before continuing.
     mailer:
       confirmation_instructions:
-        subject: 
+        subject: Confirmation instructions
       reset_password_instructions:
-        subject: 
+        subject: Reset password instructions
       unlock_instructions:
-        subject: 
+        subject: Unlock Instructions
     oauth_callbacks:
-      failure: 
-      success: 
+      failure: Could not authorize you from %{kind} because "%{reason}".
+      success: Successfully authorized from %{kind} account.
     unlocks:
-      send_instructions: 
-      unlocked: 
+      send_instructions: You will receive an email with instructions about how to unlock your account in a few minutes.
+      unlocked: Your account was successfully unlocked. You are now signed in.
     user_passwords:
       user:
-        cannot_be_blank: 
-        send_instructions: 
-        updated: 
+        cannot_be_blank: Your password cannot be blank.
+        send_instructions: You will receive an email with instructions about how to reset your password in a few minutes.
+        updated: Your password was changed successfully. You are now signed in.
     user_registrations:
-      destroyed: 
-      inactive_signed_up: 
-      signed_up: 
-      updated: 
+      destroyed: Bye! Your account was successfully cancelled. We hope to see you again soon.
+      inactive_signed_up: You have signed up successfully. However, we could not sign you in because your account is %{reason}.
+      signed_up: Welcome! You have signed up successfully.
+      updated: You updated your account successfully.
     user_sessions:
-      signed_in: 
-      signed_out: 
+      signed_in: Signed in successfully.
+      signed_out: Signed out successfully.
   errors:
     messages:
-      already_confirmed: 
-      not_found: 
-      not_locked: 
-      not_saved: 
+      already_confirmed: zostało już potwierdzone
+      not_found: nie znaleziono
+      not_locked: was not locked
+      not_saved:
+        one: ! '1 error prohibited this %{resource} from being saved:'
+        other: ! '%{count} errors prohibited this %{resource} from being saved:'
   spree:
     abbreviation: Skrót
     account: Konto
-    account_updated: Konto Zauktalizowane
+    account_updated: Dane konta zostały poprawione
     action: Akcja
     actions:
-      cancel: 
-      continue: 
-      create: 
-      destroy: 
-      edit: 
-      list: 
-      listing: 
-      new: 
-      save: 
-      update: 
-    activate: Aktywuj
-    active: Aktywny
+      cancel: Anuluj
+      continue: Kuntynuuj
+      create: Dodaj
+      destroy: Usuń
+      edit: Edycja
+      list: Lista
+      listing: Listowanie
+      new: Nowy
+      save: Zachowaj
+      update: Zatwierdź
+    activate: Aktywować
+    active: Aktywne
     add: Dodaj
-    add_action_of_type: Dodaj akcję typu
-    add_country: Dodaj Kraj
-    add_new_header: Dodaj Nowy Nagłówek
-    add_new_style: Dodaj Nowy Styl
-    add_one: Dodaj Jeden
-    add_option_value: 
-    add_product: Dodaj Produkt
-    add_product_properties: Dodaj Właściwości Produktu
-    add_rule_of_type: ! 'Dodaj '
-    add_state: Dodaj Status
-    add_stock: 
-    add_stock_management: 
-    add_to_cart: 
-    add_variant: 
-    additional_item: 
-    address1: 
-    address2: 
-    adjustment: 
-    adjustment_amount: 
-    adjustment_successfully_closed: 
-    adjustment_successfully_opened: 
-    adjustment_total: 
-    adjustments: 
+    add_action_of_type: Add action of type
+    add_country: Dodaj kraj
+    add_new_header: Dodaj nowy nagłówek
+    add_new_style: Dodaj nowy styl
+    add_one: Dodaj
+    add_option_value: Dodaj wartość opcji
+    add_product: Dodaj produkt
+    add_product_properties: Dodaj właściwości produktu
+    add_rule_of_type: Add rule of type
+    add_state: Dodaj stan
+    add_stock: Dodaj zapas
+    add_stock_management: Dodaj zarządzanie zapasem
+    add_to_cart: Dodaj do koszyka
+    add_variant: Dodaj wariant
+    additional_item: Koszt wysyłki następnego przedmiotu
+    address1: Adres
+    address2: Adres (konty.)
+    adjustment: Korekta
+    adjustment_amount: Kwota
+    adjustment_successfully_closed: Korekta została zamknięta!
+    adjustment_successfully_opened: Korekta została otwarta!
+    adjustment_total: Całość korekty
+    adjustments: Korekty
     admin:
       mail_methods:
-        send_testmail: 
+        send_testmail: Wyślij Testowy Mail
         testmail:
-          delivery_error: 
-          delivery_success: 
-          error: 
+          delivery_error: Błąd doręcznia Testowego Maila
+          delivery_success: Testowy Mail wysłano poprawnie
+          error: ! 'Test Mail error: %{e}'
       tab:
-        configuration: 
-        orders: 
-        overview: 
-        products: 
-        promotions: 
-        reports: 
-        users: 
-    administration: 
-    agree_to_privacy_policy: 
-    agree_to_terms_of_service: 
-    all: 
-    all_adjustments_closed: 
-    all_adjustments_opened: 
-    all_departments: 
-    allow_ssl_in_development_and_test: 
-    allow_ssl_in_production: 
-    allow_ssl_in_staging: 
-    already_signed_up_for_analytics: 
-    alt_text: 
-    alternative_phone: 
-    amount: 
-    analytics_desc_header_1: 
-    analytics_desc_header_2: 
-    analytics_desc_list_1: 
-    analytics_desc_list_2: 
-    analytics_desc_list_3: 
-    analytics_desc_list_4: 
-    analytics_trackers: 
-    and: 
-    are_you_sure: 
-    are_you_sure_delete: 
-    associated_adjustment_closed: 
-    attachment_default_style: 
-    attachment_default_url: 
-    attachment_path: 
-    attachment_styles: 
-    attachment_url: 
-    authorization_failure: 
-    available_on: 
-    back: 
-    back_end: 
-    back_to_adjustments_list: 
-    back_to_images_list: 
-    back_to_option_types_list: 
-    back_to_orders_list: 
-    back_to_payment_methods_list: 
-    back_to_payments_list: 
-    back_to_products_list: 
-    back_to_promotions_list: 
-    back_to_properties_list: 
-    back_to_prototypes_list: 
-    back_to_reports_list: 
-    back_to_shipping_categories: 
-    back_to_shipping_methods_list: 
-    back_to_states_list: 
-    back_to_stock_locations_list: 
-    back_to_stock_movements_list: 
-    back_to_stock_transfers_list: 
-    back_to_store: 
-    back_to_tax_categories_list: 
-    back_to_taxonomies_list: 
-    back_to_trackers_list: 
-    back_to_users_list: 
-    back_to_zones_list: 
-    backorderable: 
-    backorders_allowed: 
-    balance_due: 
-    bill_address: 
-    billing: 
-    billing_address: 
-    both: 
-    calculator: 
-    calculator_settings_warning: 
-    cancel: 
-    cannot_create_payment_without_payment_methods: 
-    cannot_create_returns: 
-    cannot_perform_operation: 
-    cannot_set_shipping_method_without_address: 
-    capture: 
-    card_code: 
-    card_number: 
-    card_type_is: 
-    cart: 
-    categories: 
-    category: 
-    check_for_spree_alerts: 
-    checkout: 
-    choose_a_customer: 
-    choose_currency: 
-    choose_dashboard_locale: 
-    city: 
-    clone: 
-    close: 
-    close_all_adjustments: 
-    code: 
-    company: 
-    complete: 
-    configuration: 
-    configurations: 
-    configure_s3: 
-    confirm: 
-    confirm_delete: 
-    confirm_password: 
-    continue: 
-    continue_shopping: 
-    cost_currency: 
-    cost_price: 
-    could_not_connect_to_jirafe: 
-    could_not_create_stock_movement: 
-    count_on_hand: 
-    countries: 
-    country: 
-    country_based: 
-    country_name: 
+        configuration: Konfiguracja
+        orders: Zamówienia
+        option_types: Opcje typów
+        overview: Overview
+        products: Produkty
+        promotions: Promocje
+        properties: Właściwości
+        prototypes: Prototypy
+        reports: Raporty
+        taxonomies: Klasy
+        users: Użytkownicy
+    administration: Administracja
+    agree_to_privacy_policy: Agree to Privacy Policy
+    agree_to_terms_of_service: Agree to Terms of Service
+    all: Wszystkie
+    all_adjustments_closed: Wszystkie korekty zostały zamknięte!
+    all_adjustments_opened: Wszystkie korekty zostały otwarte!
+    all_departments: Wszystkie działy
+    allow_ssl_in_development_and_test: Allow SSL to be used when in development and test modes
+    allow_ssl_in_production: Allow SSL to be used in production mode
+    allow_ssl_in_staging: Allow SSL to be used in staging mode
+    already_signed_up_for_analytics: You have already signed up for Spree Analytics
+    alt_text: 'Tekst dla wartość "alt"'
+    alternative_phone: Alternatywny nr telefonu
+    amount: Kwota
+    analytics_desc_header_1: Spree Analytics
+    analytics_desc_header_2: Live analytics integrated into your Spree dashboard
+    analytics_desc_list_1: Get live sales information as it happens
+    analytics_desc_list_2: Requires only a free Spree account to activate
+    analytics_desc_list_3: Absolutely no code to install
+    analytics_desc_list_4: "To jest wszystko za darmo!"
+    analytics_trackers: Lokalizatory analityki
+    and: i
+    are_you_sure: Jesteś tego pewny?
+    are_you_sure_delete: Are you sure you want to delete this record?
+    associated_adjustment_closed: The associated adjustment is closed, and will not be recalculated. Do you want to open it?
+    attachment_default_style: Attachments Style
+    attachment_default_url: Attachments Default URL
+    attachment_path: Attachments Path
+    attachment_styles: Paperclip Styles
+    attachment_url: Attachments URL
+    authorization_failure: Authorization Failure
+    available_on: Dostępne od
+    back: Back
+    back_end: Backend
+    back_to_adjustments_list: Powrót do listy korekt
+    back_to_images_list: Powrót do listy zdjęć
+    back_to_option_types_list: Powrót do listy opcji typów
+    back_to_orders_list: Powrót do listy zamówień
+    back_to_payment_methods_list: Powrót do listy metod płatności
+    back_to_payments_list: Powrót do listy płatności
+    back_to_products_list: Powrót do listy produktów
+    back_to_promotions_list: Powrót do listy promocji
+    back_to_properties_list: Powrót do listy właściwości
+    back_to_prototypes_list: Powrót do listy prototypów
+    back_to_reports_list: Powrót do listy raportów
+    back_to_shipping_categories: Powrót do kategorii wysyłki
+    back_to_shipping_categories_list: Powrót do listy kategorii wysyłki
+    back_to_shipping_methods_list: Powrót do listy metod wysyłki
+    back_to_states_list: Powrót do listy stanów
+    back_to_stock_locations_list: Powrót do listy lokalizacji zapasów
+    back_to_stock_movements_list: Powrót do listy ruchów w zapasach
+    back_to_stock_transfers_list: Powrót do listy transferów zapasów
+    back_to_store: Powrót do sklepu    
+    back_to_tax_categories_list: Powrót do listy kategorii podatku
+    back_to_tax_rates_list: Powrót do listy stawek podatku
+    back_to_taxonomies_list: Powrót do listy klas
+    back_to_trackers_list: Powrót do listy lokalizatorów
+    back_to_users_list: Powrót do listy użytkowników
+    back_to_zones_list: Powrót do listy stref
+    backorderable: Do zmówienia
+    backorders_allowed: backorders allowed
+    balance_due: Balance Due
+    bill_address: Adres rozliczeniowy
+    billing: Rozliczenie
+    billing_address: Adres rozliczeniowy
+    both: Oba
+    calculator: Kalkulator
+    calculator_settings_warning: If you are changing the calculator type, you must save first before you can edit the calculator settings
+    cancel: Anuluj
+    cannot_create_payment_without_payment_methods: You cannot create a payment for an order without any payment methods defined.
+    cannot_create_returns: Cannot create returns as this order has no shipped units.
+    cannot_perform_operation: Cannot perform requested operation
+    cannot_set_shipping_method_without_address: Cannot set shipping method until customer details are provided.
+    capture: Capture
+    card_code: Kod karty
+    card_number: Numer karty
+    card_type_is: Card type is
+    cart: Koszyk
+    categories: Kategorie
+    category: Kategoria
+    check_for_spree_alerts: Check for Spree alerts
+    checkout: Zamówienie
+    choose_a_customer: Choose a customer
+    choose_currency: Wybierz walutę
+    choose_dashboard_locale: Choose Dashboard Locale
+    city: Miasto
+    clone: Klonuj
+    close: Zamknij
+    close_all_adjustments: Zamknij wszystkie korekty
+    code: Kod
+    company: Firma
+    complete: koniec
+    configuration: Konfiguracja
+    configurations: Konfiguracje
+    configure_s3: Konfiguracja S3
+    confirm: Confirm
+    confirm_delete: Confirm Deletion
+    confirm_password: Powtórz hasło
+    continue: Kontynuuj
+    continue_shopping: Kontynuuj zakupy
+    cost_currency: Cost Currency
+    cost_price: Cena hurt
+    could_not_connect_to_jirafe: Could not connect to Jirafe to sync data. This will be automatically retried later.
+    could_not_create_stock_movement: Wystąpił problem z zachowaniem tego przeniesienia zapasów. Spróbuj jeszcze raz.
+    count_on_hand: Od ręki
+    countries: Kraje
+    country: Kraj
+    country_based: Oparta na kraju
+    country_name: Nazwa
     country_names:
-      CA: 
-      FRA: 
-      ITA: 
-      US: 
-    coupon: 
-    coupon_code: 
-    coupon_code_already_applied: 
-    coupon_code_applied: 
-    coupon_code_better_exists: 
-    coupon_code_expired: 
-    coupon_code_max_usage: 
-    coupon_code_not_eligible: 
-    coupon_code_not_found: 
-    create: 
-    create_a_new_account: 
-    created_at: 
-    credit: 
-    credit_card: 
-    credit_cards: 
-    credit_owed: 
-    currency: 
-    currency_decimal_mark: 
-    currency_settings: 
-    currency_symbol_position: 
-    currency_thousands_separator: 
-    current: 
-    current_promotion_usage: 
-    customer: 
-    customer_details: 
-    customer_details_updated: 
-    customer_search: 
-    cut: 
+      CA: Kanada
+      FRA: Francja
+      ITA: Włochy
+      PL: Polska
+      US: Stany Zjednoczone
+    coupon: Kupon
+    coupon_code: Kod kuponu
+    coupon_code_already_applied: The coupon code has already been applied to this order
+    coupon_code_applied: The coupon code was successfully applied to your order.
+    coupon_code_better_exists: The previously applied coupon code results in a better deal
+    coupon_code_expired: The coupon code is expired
+    coupon_code_max_usage: Coupon code usage limit exceeded
+    coupon_code_not_eligible: This coupon code is not eligible for this order
+    coupon_code_not_found: The coupon code you entered doesn't exist. Please try again.
+    create: Utwórz
+    create_a_new_account: Utwórz nowe konto
+    created_at: Utoworzono w
+    credit: Kredyt
+    credit_card: Karta kredytowa
+    credit_cards: Karty kredytowe
+    credit_owed: Credit Owed
+    currency: Waluta
+    currency_decimal_mark: Znak dziesiętny waluty
+    currency_settings: Ustawienia waluty
+    currency_symbol_position: Umieścić sumbol waluty przed albo za kwotą?
+    currency_thousands_separator: Sperarator tysięczny waluty
+    current: Current
+    current_promotion_usage: ! 'Current Usage: %{count}'
+    customer: Klient
+    customer_details: Dane klienta
+    customer_details_updated: Customer Details Updated
+    customer_search: Szukaj kilenta
+    cut: Cut
     dash:
       jirafe:
-        app_id: 
-        app_token: 
-        currently_unavailable: 
-        explanation: 
-        header: 
-        site_id: 
-        token: 
-      jirafe_settings_updated: 
-    date: 
-    date_completed: 
+        app_id: App ID
+        app_token: App Token
+        currently_unavailable: Jirafe is currently unavailable. Spree will automatically connect to Jirafe once it is available.
+        explanation: The fields below may already be populated if you chose to register with Jirafe from the admin dashboard.
+        header: Jirafe Analytics Settings
+        site_id: Site ID
+        token: Token
+      jirafe_settings_updated: Jirafe Settings have been updated.
+    date: Data
+    date_completed: Data zamówienia
     date_picker:
-      first_day: 
-      format: 
-      js_format: 
-    date_range: 
-    default: 
-    default_meta_description: 
-    default_meta_keywords: 
-    default_seo_title: 
-    default_tax: 
-    default_tax_zone: 
-    delete: 
-    delivery: 
-    depth: 
-    description: 
-    destination: 
-    destroy: 
-    discount_amount: 
-    dismiss_banner: 
-    display: 
-    display_currency: 
-    edit: 
-    editing_option_type: 
-    editing_payment_method: 
-    editing_product: 
-    editing_promotion: 
-    editing_property: 
-    editing_prototype: 
-    editing_shipping_category: 
-    editing_shipping_method: 
-    editing_state: 
-    editing_stock_location: 
-    editing_stock_movement: 
-    editing_tax_category: 
-    editing_tax_rate: 
-    editing_tracker: 
-    editing_user: 
-    editing_zone: 
-    email: 
-    empty: 
-    empty_cart: 
-    enable_mail_delivery: 
-    end: 
-    ending_in: 
-    environment: 
-    error: 
+      first_day: 0
+      format: ! '%Y/%m/%d'
+      js_format: yy/mm/dd
+    date_range: Zakres datowy
+    default: Domyślny
+    default_meta_description: Domyślne Meta Description
+    default_meta_keywords: Domyślne Meta Keywords
+    default_seo_title: Domyślne Seo Title
+    default_tax: Domyślny podatek
+    default_tax_zone: Domyślna strefa podatkowa
+    delete: Delete
+    delivery: Wysyłka
+    depth: Depth
+    description: Opis
+    destination: Cel
+    destroy: Usuń
+    discount_amount: Discount Amount
+    dismiss_banner: "Nie, dziękuję! Nie jestem zaintersowana/-y, nie wyświetlaje tej wiadomości ponownie."
+    display: Wyświetl
+    display_currency: Pokaż symbol waluty
+    edit: Edycja
+    editing_option_type: Edycja opcji typu
+    editing_payment_method: Edycja metody płatności
+    editing_product: Edycja produktu
+    editing_promotion: Edycja promocji
+    editing_property: Edycja właściwości
+    editing_prototype: Edycja Prototypu
+    editing_shipping_category: Edycja kategorii wysyłki
+    editing_shipping_method: Edycja metod wysyłki
+    editing_state: Edycja Stanu
+    editing_stock_location: Edycja lokalizacji zapasów
+    editing_stock_movement: Edycja przeniesienia zapasów
+    editing_tax_category: Edycja kategorii podatku
+    editing_tax_rate: Eydcja stawki podatku
+    editing_tracker: Edycja lokalizatora
+    editing_user: Edycja użytkownika
+    editing_zone: Edycja strefy
+    email: Email
+    empty: Pusty
+    empty_cart: Opróżnij koszyk
+    enable_mail_delivery: Enable Mail Delivery
+    end: Koniec
+    ending_in: Ending in
+    environment: Środowisko
+    error: błąd
     errors:
       messages:
-        could_not_create_taxon: 
-        no_payment_methods_available: 
-        no_shipping_methods_available: 
-    errors_prohibited_this_record_from_being_saved: 
-    event: 
+        could_not_create_taxon: Nie można było utworzyć podklasy
+        no_payment_methods_available: No payment methods are configured for this environment
+        no_shipping_methods_available: No shipping methods available for selected location, please change your address and try again.
+    errors_prohibited_this_record_from_being_saved:
+      one: 1 error prohibited this record from being saved
+      other: ! '%{count} errors prohibited this record from being saved'
+    event: Event
     events:
       spree:
         cart:
-          add: 
+          add: Dodaj do koszyka
         checkout:
-          coupon_code_added: 
+          coupon_code_added: Kod kuponu dodany
         content:
-          visited: 
+          visited: Visit static content page
         order:
-          contents_changed: 
-        page_view: 
+          contents_changed: Order contents changed
+        page_view: Static page viewed
         user:
-          signup: 
+          signup: User signup
     exceptions:
-      count_on_hand_setter: 
-    expiration: 
-    extension: 
-    filename: 
-    fill_in_customer_info: 
-    filter_results: 
-    finalize: 
-    first_item: 
-    first_name: 
-    first_name_begins_with: 
-    flat_percent: 
-    flat_rate_per_item: 
-    flat_rate_per_order: 
-    flexible_rate: 
-    forgot_password: 
-    free_shipping: 
-    front_end: 
-    gateway: 
-    gateway_config_unavailable: 
-    gateway_error: 
-    general: 
-    general_settings: 
-    google_analytics: 
-    google_analytics_id: 
-    guest_checkout: 
-    guest_user_account: 
-    has_no_shipped_units: 
-    height: 
-    hide_cents: 
-    home: 
+      count_on_hand_setter: Cannot set count_on_hand manually, as it is set automatically by the recalculate_count_on_hand callback. Please use `update_column(:count_on_hand, value)` instead.
+    expiration: Expiration
+    extension: Extension
+    filename: Nazwa pliku
+    fill_in_customer_info: Please fill in customer info
+    filter_results: Rezultaty wyszukania
+    finalize: Finalize
+    first_item: Koszt wysyłki pierwszego przedmiotu
+    first_name: Imię
+    first_name_begins_with: Nazwa zaczynająca się na
+    flat_percent: Równy Procent
+    flat_rate_per_item: Jednolita stawka co kolejny przedmiot
+    flat_rate_per_order: Jednolita stawka co kolejne zamówienia
+    flexible_rate: Elastyczna stawka
+    forgot_password: Zapomniałaś/-eś hasła?
+    free_shipping: Darmowa wysyłka
+    front_end: Front End
+    gateway: Gateway
+    gateway_config_unavailable: Gateway unavailable for environment
+    gateway_error: Gateway Error
+    general: Generalne
+    general_settings: Generalne ustawienia
+    google_analytics: Google Analytics
+    google_analytics_id: Analytics ID
+    guest_checkout: Guest Checkout
+    guest_user_account: Zamów jako gość
+    has_no_shipped_units: has no shipped units
+    height: Wysokość
+    hide_cents: Ukryj grosze
+    home: Home
     i18n:
-      available_locales: 
-      fields: 
-      language: 
-      localization_settings: 
-      only_complete: 
-      only_incomplete: 
-      select_locale: 
-      show_only: 
-      supported_locales: 
-      this_file_language: 
-      translations: 
-    icon: 
-    image: 
-    image_settings: 
-    image_settings_updated: 
-    image_settings_warning: 
-    images: 
-    included_in_price: 
-    included_price_validation: 
-    instructions_to_reset_password: 
-    insufficient_stock: 
-    intercept_email_address: 
-    intercept_email_instructions: 
-    internal_name: 
-    invalid_payment_provider: 
-    invalid_promotion_action: 
-    invalid_promotion_rule: 
-    inventory: 
-    inventory_adjustment: 
-    inventory_error_flash_for_insufficient_quantity: 
-    is_not_available_to_shipment_address: 
-    iso_name: 
-    item: 
-    item_description: 
-    item_total: 
+      available_locales: Dostępne tłumaczenia
+      fields: Pola
+      language: Język
+      localization_settings: Localization Settings
+      only_complete: Tylko kompletne
+      only_incomplete: Tylko niekompletne
+      select_locale: Wybierz tłumacznie
+      show_only: Pokaż tylko
+      supported_locales: Wspierane tłumaczenia
+      this_file_language: Polski
+      translations: Tłumaczenia
+    icon: Ikona
+    image: Zdjęcie
+    image_settings: Ustawienia zdjęć
+    image_settings_updated: Ustawienia zdjęć zostały poprawione.
+    image_settings_warning: You will need to regenerate thumbnails if you update the paperclip styles. Use rake paperclip:refresh:thumbnails CLASS=Spree::Image to do this.
+    images: Zdjęcia
+    included_in_price: Zawarta w cenie
+    included_price_validation: nie może zostać wybrane dopóki nie określisz Domyślnej Strefy Podatkowej
+    instructions_to_reset_password: Please enter your email on the form below
+    insufficient_stock: Insufficient stock available, only %{on_hand} remaining
+    intercept_email_address: Intercept Email Address
+    intercept_email_instructions: Override email recipient and replace with this address.
+    internal_name: Nazwa wewnętrzna
+    invalid_payment_provider: Invalid payment provider.
+    invalid_promotion_action: Invalid promotion action.
+    invalid_promotion_rule: Invalid promotion rule.
+    inventory: Inventory
+    inventory_adjustment: Inventory Adjustment
+    inventory_error_flash_for_insufficient_quantity: An item in your cart has become unavailable.
+    is_not_available_to_shipment_address: is not available to shipment address
+    iso_name: Iso Name
+    item: Przedmiot
+    item_description: Opis przedmiotu
+    item_total: Za przedmioty
     item_total_rule:
       operators:
-        gt: 
-        gte: 
-    items_cannot_be_shipped: 
-    jirafe: 
+        gt: większe niż
+        gte: większe niż lub równe z
+    items_cannot_be_shipped: Nie jesteśmy w stanie obliczyć kosztów przesyłki dla wybranych pozycji.
+    jirafe: Jirafe
     landing_page_rule:
-      path: 
-    last_name: 
-    last_name_begins_with: 
-    learn_more: 
-    list: 
-    listing_countries: 
-    listing_orders: 
-    listing_products: 
-    listing_reports: 
-    listing_tax_categories: 
-    listing_users: 
-    loading: 
-    locale_changed: 
-    location: 
-    lock: 
-    logged_in_as: 
-    logged_in_succesfully: 
-    logged_out: 
-    login: 
-    login_as_existing: 
-    login_failed: 
-    login_name: 
-    logout: 
-    look_for_similar_items: 
-    maestro_or_solo_cards: 
-    mail_method_settings: 
-    mail_methods: 
-    make_refund: 
-    master_price: 
+      path: Path
+    last_name: Nazwisko
+    last_name_begins_with: Nazwa kończąca się na
+    learn_more: Learn More
+    list: Lista
+    listing_countries: Lista krajów
+    listing_orders: Lista zamówień
+    listing_products: Lista produktów
+    listing_reports: Lista raportów
+    listing_tax_categories: Lista kategorii podatku
+    listing_users: Lista użytkowników
+    loading: Ładowanie
+    locale_changed: Locale Changed
+    location: Location
+    lock: Lock
+    logged_in_as: Zalogowana/-y jako
+    logged_in_succesfully: "Witaj! Zalogowałeś się poprawnie"
+    logged_out: You have been logged out.
+    login: Zaloguj
+    login_as_existing: Zaloguj się jako istniejący w bazie klient
+    login_failed: Login authentication failed.
+    login_name: Login
+    logout: Wyloguj
+    look_for_similar_items: Sprawdź podobne produkty
+    maestro_or_solo_cards: Maestro/Solo cards
+    mail_method_settings: Mail Method Settings
+    mail_methods: Mail Methods
+    make_refund: Make refund
+    master_price: Podstawowa cena
     match_choices:
-      all: 
-      none: 
-    max_items: 
-    meta_description: 
-    meta_keywords: 
-    metadata: 
-    minimal_amount: 
-    month: 
-    more: 
-    move_stock_between_locations: 
-    my_account: 
-    my_orders: 
-    name: 
-    name_or_sku: 
-    new: 
-    new_adjustment: 
-    new_customer: 
-    new_image: 
-    new_option_type: 
-    new_order: 
-    new_order_completed: 
-    new_payment: 
-    new_payment_method: 
-    new_product: 
-    new_promotion: 
-    new_property: 
-    new_prototype: 
-    new_return_authorization: 
-    new_shipping_category: 
-    new_shipping_method: 
-    new_state: 
-    new_stock_location: 
-    new_stock_movement: 
-    new_stock_transfer: 
-    new_tax_category: 
-    new_tax_rate: 
-    new_taxon: 
-    new_taxonomy: 
-    new_tracker: 
-    new_user: 
-    new_variant: 
-    new_zone: 
-    next: 
-    no_actions_added: 
-    no_orders_found: 
-    no_payment_methods_found: 
-    no_pending_payments: 
-    no_products_found: 
-    no_promotions_found: 
-    no_resource_found: 
-    no_results: 
-    no_rules_added: 
-    no_shipping_methods_found: 
-    no_stock_locations_found: 
-    no_trackers_found: 
-    no_tracking_present: 
-    none: 
-    normal_amount: 
-    not: 
-    not_available: 
-    not_enough_stock: 
-    not_found: 
+      all: Wszystko
+      none: None
+    max_items: Maksymalnie przedmiotów
+    meta_description: Meta Description
+    meta_keywords: Meta Keywords
+    metadata: Metadata
+    minimal_amount: Minimalna kwota
+    month: Miesiąc
+    more: Więcej
+    move_stock_between_locations: Przenieś zasób pomiędzy lokalizacjami
+    my_account: Moje konto
+    my_orders: Moje zamówienia
+    name: Nazwa
+    name_or_sku: Nazwa lub SKU (wpisz przynajmniej 4 znaki nazwy produktu)
+    new: Nowe
+    new_adjustment: Nowa korekta
+    new_customer: Nowy klient
+    new_image: Nowe zdjęcie
+    new_option_type: Nowa opcja typu
+    new_order: Nowe zamówienie
+    new_order_completed: New Order Completed
+    new_payment: Nowa płatność
+    new_payment_method: Nowa metoda płatności
+    new_product: Nowy produkt
+    new_promotion: Nowa promocja
+    new_property: Nowa właściwość
+    new_prototype: Nowy Prototyp
+    new_return_authorization: New Return Authorization
+    new_shipping_category: Nowa kategoria wysyłki
+    new_shipping_method: Nowa metoda wysyłki
+    new_state: Nowy stan
+    new_stock_location: Nowa lokalizacja zapasów
+    new_stock_movement: Nowe przeniesienie zapasów
+    new_stock_transfer: Nowy transfer zapasów
+    new_tax_category: Nowa kategoria podatku
+    new_tax_rate: Nowa stawka podatku
+    new_taxon: Nowa podklasa
+    new_taxonomy: Nowa klasa
+    new_tracker: Nowy lokalizator
+    new_user: Nowy użytkownik
+    new_variant: Nowy wariant
+    new_zone: Nowa strefa
+    next: Następna
+    no_actions_added: No actions added
+    no_orders_found: No orders found
+    no_payment_methods_found: No payment methods found
+    no_pending_payments: Brak oczekujących płatności
+    no_products_found: Nie znaleziono produktów
+    no_promotions_found: Nie znaleziono promocji
+    no_resource_found: ! '%{resource} - nie znaleziono'
+    no_results: Brak rezultatów
+    no_rules_added: No rules added
+    no_shipping_methods_found: Nie znaleziono żadnych metod wysyłki
+    no_stock_locations_found: No stock locations found
+    no_trackers_found: Nie znaleziono lokalizatorów
+    no_tracking_present: Nie wprowadzono danych lokalizatora
+    none: None
+    normal_amount: Normalna kwota
+    not: not
+    not_available: N/A
+    not_enough_stock: There is not enough inventory at the source location to complete this transfer.
+    not_found: ! '%{resource} is not found'
     notice_messages:
-      product_cloned: 
-      product_deleted: 
-      product_not_cloned: 
-      product_not_deleted: 
-      variant_deleted: 
-      variant_not_deleted: 
-    on_hand: 
-    open: 
-    open_all_adjustments: 
-    option_type: 
-    option_type_placeholder: 
-    option_types: 
-    option_value: 
-    option_values: 
-    optional: 
-    options: 
-    or: 
-    or_over_price: 
-    order: 
-    order_adjustments: 
-    order_details: 
-    order_email_resent: 
-    order_information: 
+      product_cloned: Produkt został sklonowany
+      product_deleted: Pordukt został skasowany
+      product_not_cloned: Pordukt nie może być sklonowany
+      product_not_deleted: Produkt nie może być skasowany
+      variant_deleted: Wariant został skasowany
+      variant_not_deleted: Wariant nie może być skasowany
+    on_hand: On Hand
+    open: Otwarte
+    open_all_adjustments: Otwórz wszystkie korekty
+    option_type: Opcja typu
+    option_type_placeholder: Wybierz opcję typu
+    option_types: Opcje typów
+    option_value: Option Value
+    option_values: Option Values
+    optional: Optional
+    options: Options
+    or: albo
+    or_over_price: ! '%{price} lub powyżej'
+    order: Order
+    order_adjustments: Korekta zamówienia
+    order_details: Szczegóły zamówienia
+    order_email_resent: Order Email Resent
+    order_information: Informacje o zamówieniu
     order_mailer:
       cancel_email:
-        dear_customer: 
-        instructions: 
-        order_summary_canceled: 
-        subject: 
-        subtotal: 
-        total: 
+        dear_customer: Dear Customer,
+        instructions: Your order has been CANCELED.  Please retain this cancellation information for your records.
+        order_summary_canceled: Order Summary [CANCELED]
+        subject: Cancellation of Order
+        subtotal: ! 'Subtotal: %{subtotal}'
+        total: ! 'Order Total: %{total}'
       confirm_email:
-        dear_customer: 
-        instructions: 
-        order_summary: 
-        subject: 
-        subtotal: 
-        thanks: 
-        total: 
-    order_not_found: 
-    order_number: 
+        dear_customer: Dear Customer,
+        instructions: Please review and retain the following order information for your records.
+        order_summary: Podsumowanie zamówienia
+        subject: Order Confirmation
+        subtotal: ! 'Subtotal: %{subtotal}'
+        thanks: Thank you for your business.
+        total: ! 'Order Total: %{total}'
+    order_not_found: "Nie możemy znaleźć twojego zmówienia. Prosimy spróbowac jeszcze raz."
+    order_number: Order
     order_populator:
-      out_of_stock: 
-      please_enter_reasonable_quantity: 
-    order_processed_successfully: 
+      out_of_stock: ! '%{item} is out of stock.'
+      please_enter_reasonable_quantity: Please enter a reasonable quantity.
+    order_processed_successfully: Proces twojego zmówienia przebiegł poprawnie i zakończył się sukcesem
     order_state:
-      address: 
-      awaiting_return: 
-      canceled: 
-      cart: 
-      complete: 
-      confirm: 
-      delivery: 
-      payment: 
-      resumed: 
-      returned: 
-    order_summary: 
-    order_sure_want_to: 
-    order_total: 
-    order_updated: 
-    orders: 
-    out_of_stock: 
-    overview: 
-    package_from: 
+      address: adres
+      awaiting_return: awaiting return
+      canceled: anulowano
+      cart: koszyk
+      complete: koniec
+      confirm: potwierdzenie
+      delivery: wysyłka
+      payment: płatność
+      resumed: resumed
+      returned: returned
+    order_summary: Podsumowanie zamówienia
+    order_sure_want_to: Are you sure you want to %{event} this order?
+    order_total: Za całość
+    order_updated: Order Updated
+    orders: Zamówienia
+    out_of_stock: Out of Stock
+    overview: Overview
+    package_from: Pakiet
     pagination:
-      next_page: 
-      previous_page: 
-      truncate: 
-    password: 
-    paste: 
-    path: 
-    pay: 
-    payment: 
-    payment_information: 
-    payment_method: 
-    payment_method_not_supported: 
-    payment_methods: 
-    payment_processing_failed: 
-    payment_processor_choose_banner_text: 
-    payment_processor_choose_link: 
-    payment_state: 
+      next_page: następna &raquo;
+      previous_page: ! '&laquo; poprzednia'
+      truncate: ! '&hellip;'
+    password: Hasło
+    paste: Paste
+    path: Ścieżka
+    pay: pay
+    payment: Płatność
+    payment_information: Informacja o płatności
+    payment_method: Metoda płatności
+    payment_method_not_supported: That payment method is unsupported. Please choose another one.
+    payment_methods: Metody płatności
+    payment_processing_failed: Payment could not be processed, please check the details you entered
+    payment_processor_choose_banner_text: If you need help choosing a payment processor, please visit
+    payment_processor_choose_link: our payments page
+    payment_state: Stan płatności
     payment_states:
-      balance_due: 
-      checkout: 
-      completed: 
-      credit_owed: 
-      failed: 
-      paid: 
-      pending: 
-      processing: 
-      void: 
-    payment_updated: 
-    payments: 
-    percent: 
-    percent_per_item: 
-    permalink: 
-    phone: 
-    place_order: 
-    please_define_payment_methods: 
-    populate_get_error: 
-    powered_by: 
-    presentation: 
-    previous: 
-    price: 
-    price_range: 
-    price_sack: 
-    process: 
-    product: 
-    product_details: 
-    product_has_no_description: 
-    product_not_available_in_this_currency: 
-    product_properties: 
+      balance_due: balance due
+      checkout: zamównienie
+      completed: koniec
+      credit_owed: credit owed
+      failed: błędny
+      paid: zapłacono
+      pending: oczekuje
+      processing: w procesie
+      void: nieważny
+    payment_updated: Payment Updated
+    payments: Płatności
+    percent: Percent
+    percent_per_item: Percent Per Item
+    permalink: Permalink
+    phone: Telefon
+    place_order: Place Order
+    please_define_payment_methods: Please define some payment methods first.
+    populate_get_error: Something went wrong. Please try adding the item again.
+    powered_by: Powered by
+    presentation: Prezentacja
+    previous: Previous
+    price: Cena
+    price_range: Zakres cenowy
+    price_sack: Cena worka
+    process: Proces
+    product: Produkt
+    product_details: Dane produktu
+    product_has_no_description: This product has no description
+    product_not_available_in_this_currency: This product is not available in the selected currency.
+    product_properties: Właściwości produktu
     product_rule:
-      choose_products: 
-      label: 
-      match_all: 
-      match_any: 
+      choose_products: Wybierz produkty
+      label: Order must contain %{select} of these products
+      match_all: wszystko
+      match_any: at least one
       product_source:
-        group: 
-        manual: 
-    products: 
-    promotion: 
-    promotion_action: 
+        group: From product group
+        manual: Manually choose
+    products: Produkty
+    promotion: Promocja
+    promotion_action: Promotion Action
     promotion_action_types:
       create_adjustment:
-        description: 
-        name: 
+        description: Creates a promotion credit adjustment on the order
+        name: Create adjustment
       create_line_items:
-        description: 
-        name: 
+        description: Populates the cart with the specified quantity of variant
+        name: Create line items
       give_store_credit:
-        description: 
-        name: 
-    promotion_actions: 
+        description: Gives the user store credit of the amount specified
+        name: Give store credit
+    promotion_actions: Akcje
     promotion_form:
       match_policies:
-        all: 
-        any: 
-    promotion_rule: 
+        all: Match all of these rules
+        any: Match any of these rules
+    promotion_rule: Promotion Rule
     promotion_rule_types:
       first_order:
-        description: 
-        name: 
+        description: Must be the customer's first order
+        name: First order
       item_total:
-        description: 
-        name: 
+        description: Order total meets these criteria
+        name: Item total
       landing_page:
-        description: 
-        name: 
+        description: Customer must have visited the specified page
+        name: Landing Page
       product:
-        description: 
-        name: 
+        description: Order includes specified product(s)
+        name: Product(s)
       user:
-        description: 
-        name: 
+        description: Available only to the specified users
+        name: Użytkownik
       user_logged_in:
-        description: 
-        name: 
-    promotions: 
-    properties: 
-    property: 
-    prototype: 
-    prototypes: 
-    provider: 
-    provider_settings_warning: 
-    qty: 
-    quantity: 
-    quantity_returned: 
-    quantity_shipped: 
-    rate: 
-    reason: 
-    receive: 
-    receive_stock: 
-    received: 
-    reference: 
-    refund: 
-    register: 
-    registration: 
-    remember_me: 
-    remove: 
-    rename: 
-    reports: 
-    resend: 
-    reset_password: 
-    response_code: 
-    resume: 
-    resumed: 
-    return: 
-    return_authorization: 
-    return_authorization_updated: 
-    return_authorizations: 
-    return_quantity: 
-    returned: 
-    review: 
-    rma_credit: 
-    rma_number: 
-    rma_value: 
-    roles: 
-    rules: 
-    s3_access_key: 
-    s3_bucket: 
-    s3_headers: 
-    s3_protocol: 
-    s3_secret: 
-    sales_total: 
-    sales_total_description: 
-    sales_totals: 
-    save_and_continue: 
-    say_no: 
-    say_yes: 
-    scope: 
-    search: 
-    search_results: 
-    searching: 
-    secure_connection_type: 
-    security_settings: 
-    select: 
-    select_from_prototype: 
-    select_stock: 
-    send_copy_of_all_mails_to: 
-    send_mails_as: 
-    server: 
-    server_error: 
-    settings: 
-    ship: 
-    ship_address: 
-    ship_total: 
-    shipment: 
-    shipment_inc_vat: 
+        description: Available only to logged in users
+        name: User Logged In
+    promotions: Promocje
+    propagate_all_variants: Zastosuj dla wszystkich wariantów
+    properties: Właściwości
+    property: Właściwość
+    prototype: Prototyp
+    prototypes: Prototypy
+    provider: Provider
+    provider_settings_warning: If you are changing the provider type, you must save first before you can edit the provider settings
+    qty: Ilość
+    quantity: Ilość
+    quantity_returned: Quantity Returned
+    quantity_shipped: Quantity Shipped
+    rate: Stawka
+    reason: Powód
+    receive: receive
+    receive_stock: Receive Stock
+    received: Received
+    reference: Reference
+    refund: Refund
+    register: Register
+    registration: Registration
+    remember_me: Zapamiętaj mnie
+    remove: Usuń
+    rename: Rename
+    reports: Reports
+    resend: Resend
+    reset_password: Reset my password
+    response_code: Response Code
+    resume: resume
+    resumed: Resumed
+    return: powrót
+    return_authorization: Return Authorization
+    return_authorization_updated: Return authorization updated
+    return_authorizations: Return Authorizations
+    return_quantity: Return Quantity
+    returned: Returned
+    review: Review
+    rma_credit: RMA Credit
+    rma_number: RMA Number
+    rma_value: RMA Value
+    roles: Role
+    rules: Rules
+    s3_access_key: Access Key
+    s3_bucket: Bucket
+    s3_headers: S3 Headers
+    s3_protocol: S3 Protocol
+    s3_secret: Secret Key
+    sales_total: Sales Total
+    sales_total_description: Sales Total For All Orders
+    sales_totals: Sales Totals
+    save_and_continue: Zachowaj i kontynuuj
+    say_no: 'Nie'
+    say_yes: 'Tak'
+    scope: Scope
+    search: Szukaj
+    search_results: "Szukaj rezultatów dla '%{keywords}'"
+    searching: Wyszukiwanie
+    secure_connection_type: Secure Connection Type
+    security_settings: Security Settings
+    select: Wybierz
+    select_from_prototype: Select From Prototype
+    select_stock: Wybierz zasób
+    send_copy_of_all_mails_to: Send Copy of All Mails To
+    send_mails_as: Send Mails As
+    server: Server
+    server_error: The server returned an error
+    settings: Ustawienia
+    ship: ship
+    ship_address: Ship Address
+    ship_total: Ship Total
+    shipment: Przesyłka
+    shipment_inc_vat: Przesyłka zawiera VAT
     shipment_mailer:
       shipped_email:
-        dear_customer: 
-        instructions: 
-        shipment_summary: 
-        subject: 
-        thanks: 
-        track_information: 
-        track_link: 
-    shipment_state: 
+        dear_customer: Dear Customer,
+        instructions: Your order has been shipped
+        shipment_summary: Shipment Summary
+        subject: Shipment Notification
+        thanks: Thank you for your business.
+        track_information: ! 'Informacja o lokalizatorze: %{tracking}'
+        track_link: ! 'Link lokalizatora: %{url}'
+    shipment_state: Stan wysyłki
     shipment_states:
-      backorder: 
-      partial: 
-      pending: 
-      ready: 
-      shipped: 
-    shipments: 
-    shipped: 
-    shipping: 
-    shipping_address: 
-    shipping_categories: 
-    shipping_category: 
-    shipping_flat_rate_per_item: 
-    shipping_flat_rate_per_order: 
-    shipping_flexible_rate: 
-    shipping_instructions: 
-    shipping_method: 
-    shipping_methods: 
-    shipping_price_sack: 
-    shop_by_taxonomy: 
-    shopping_cart: 
-    show: 
-    show_active: 
-    show_deleted: 
-    show_only_complete_orders: 
-    show_rate_in_label: 
-    site_name: 
-    site_url: 
-    sku: 
-    smtp: 
-    smtp_authentication_type: 
-    smtp_domain: 
-    smtp_mail_host: 
-    smtp_password: 
-    smtp_port: 
-    smtp_send_all_emails_as_from_following_address: 
-    smtp_send_copy_to_this_addresses: 
-    smtp_username: 
-    source: 
-    special_instructions: 
-    split: 
+      backorder: do zamówienia
+      partial: część
+      pending: oczekuje
+      ready: gotowe
+      shipped: wysłano
+    shipments: Shipments
+    shipped: Shipped
+    shipping: Wysłka
+    shipping_address: Adres do wysyłki
+    shipping_categories: Kategorie wysyłki
+    shipping_category: Kategoria wysyłki
+    shipping_flat_rate_per_item: Jednolita stawka co kolejne przedmiot
+    shipping_flat_rate_per_order: Jednolita stawka co kolejne zamówienia
+    shipping_flexible_rate: Elastyczna stawka co kolejny przedmiot
+    shipping_instructions: Instrukcje wysyłki
+    shipping_method: Metoda wysyłki
+    shipping_methods: Metody wysyłki
+    shipping_price_sack: Cena worka
+    shop_by_taxonomy: Kupuj wg %{taxonomy}
+    shopping_cart: Karta zakupów
+    show: Pokaż
+    show_active: Pokaż aktywne
+    show_deleted: Pokaż kosz
+    show_only_complete_orders: Pokaż tylko kompletne zamówienia
+    show_rate_in_label: Pokaż stawkę w lebelu
+    site_name: Nazwa strony
+    site_url: URL strony
+    sku: SKU
+    smtp: SMTP
+    smtp_authentication_type: SMTP Authentication Type
+    smtp_domain: SMTP Domain
+    smtp_mail_host: SMTP Mail Host
+    smtp_password: SMTP Password
+    smtp_port: SMTP Port
+    smtp_send_all_emails_as_from_following_address: Send all mails as from the following address.
+    smtp_send_copy_to_this_addresses: Sends a copy of all outgoing mails to this address. For multiple addresses, separate with commas.
+    smtp_username: SMTP Username
+    source: Źródło
+    special_instructions: Special Instructions
+    split: Split
     spree/order:
-      coupon_code: 
-    spree_gateway_error_flash_for_checkout: 
-    start: 
-    start_date: 
-    state: 
-    state_based: 
-    states: 
-    states_required: 
-    status: 
-    stock_location: 
-    stock_location_info: 
-    stock_locations: 
-    stock_management: 
-    stock_management_requires_a_stock_location: 
-    stock_movements: 
-    stock_movements_for_stock_location: 
-    stock_successfully_transferred: 
-    stock_transfer: 
-    stock_transfers: 
-    stop: 
-    store: 
-    street_address: 
-    street_address_2: 
-    subtotal: 
-    subtract: 
-    successfully_created: 
-    successfully_removed: 
-    successfully_signed_up_for_analytics: 
-    successfully_updated: 
-    tax: 
-    tax_categories: 
-    tax_category: 
-    tax_rate_amount_explanation: 
-    tax_rates: 
-    tax_settings: 
-    tax_total: 
-    taxon: 
-    taxon_edit: 
-    taxon_placeholder: 
-    taxonomies: 
-    taxonomy: 
-    taxonomy_edit: 
-    taxonomy_tree_error: 
-    taxonomy_tree_instruction: 
-    taxons: 
-    test: 
+      coupon_code: Kod kuponu
+    spree_gateway_error_flash_for_checkout: There was a problem with your payment information. Please check your information and try again.
+    start: Start
+    start_date: Valid from
+    state: Stan
+    state_based: Oparta na stanie
+    states: Stany
+    states_required: Wymagane stany
+    status: Status
+    stock_location: Lokalizacja zapasów
+    stock_location_info: Informacje o lokalizacji zapasów
+    stock_locations: Lokalizacje zapasów
+    stock_management: Zarządzanie zapasami
+    stock_management_requires_a_stock_location: Please create a stock location in order to manage stock.
+    stock_movements: Ruch w zapasach
+    stock_movements_for_stock_location: Ruch w zapasach dla %{stock_location_name}
+    stock_successfully_transferred: Stock was successfully transferred between locations.
+    stock_transfer: Transfer zapasów
+    stock_transfers: Transfery zapasów
+    stop: Stop
+    store: Sklep
+    street_address: Ulica i nr domu/mieszkania
+    street_address_2: Ulica i nr domu/mieszkania (kontynuacja)
+    subtotal: Podsumowanie
+    subtract: Subtract
+    successfully_created: ! '%{resource} został/a poprawnie dodany/a!'
+    successfully_removed: ! '%{resource} został/a popranie usunięty/a!'
+    successfully_signed_up_for_analytics: Successfully signed up for Spree Analytics
+    successfully_updated: ! '%{resource} został/a popranie poprawiony/a!'
+    tax: Tax
+    tax_categories: Kategorie podatku
+    tax_category: Kategoria podatku
+    tax_rate_amount_explanation: Stawka powinna być określano w dziesiętnych częściach dla kalkulatora podatku, (np. jeżeli stawka wynosi 5% to wpisujemy w pole 0.05)
+    tax_rates: Stawki podatku
+    tax_settings: Ustawienia podatkowe
+    tax_total: Tax Total
+    taxon: Podklasa
+    taxon_edit: Edycja podklasy
+    taxon_placeholder: Dodaj podklasę
+    taxonomies: Klasy
+    taxonomy: Klasa
+    taxonomy_edit: Edycja klasy
+    taxonomy_tree_error: The requested change has not been accepted and the tree has been returned to its previous state, please try again.
+    taxonomy_tree_instruction: ! '* Kliknięcie prawym klawiszem na gałąź daje akces do jej menu, pozwala ją edytować, kasować i sortować.'
+    taxons: Podklasy
+    test: Test
     test_mailer:
       test_email:
-        greeting: 
-        message: 
-        subject: 
-    test_mode: 
-    thank_you_for_your_order: 
-    there_are_no_items_for_this_order: 
-    there_were_problems_with_the_following_fields: 
-    thumbnail: 
-    time: 
-    to_add_variants_you_must_first_define: 
-    total: 
-    tracking: 
-    tracking_number: 
-    tracking_url: 
-    tracking_url_placeholder: 
-    transfer_from_location: 
-    transfer_stock: 
-    transfer_to_location: 
-    tree: 
-    type: 
-    type_to_search: 
-    unable_to_connect_to_gateway: 
-    under_price: 
-    unlock: 
-    unrecognized_card_type: 
-    unshippable_items: 
-    update: 
-    updating: 
-    usage_limit: 
-    use_billing_address: 
-    use_new_cc: 
-    use_s3: 
-    user: 
+        greeting: Gratulacje!
+        message: If you have received this email, then your email settings are correct.
+        subject: Testowy Email
+    test_mode: Test Mode
+    thank_you_for_your_order: Thank you for your business.  Please print out a copy of this confirmation page for your records.
+    there_are_no_items_for_this_order: There are no items for this order. Please add an item to the order to continue.
+    there_were_problems_with_the_following_fields: There were problems with the following fields
+    thumbnail: Thumbnail
+    time: Time
+    to_add_variants_you_must_first_define: To add variants, you must first define
+    total: Łącznie
+    tracking: Śledzenie
+    tracking_number: Numer lokalizatora
+    tracking_url: URL lokalizatora
+    tracking_url_placeholder: e.g. http://quickship.com/package?num=:tracking
+    transfer_from_location: Transfer From
+    transfer_stock: Transfer Stock
+    transfer_to_location: Transfer To
+    tree: Rozgałęzienie klasy
+    type: Typ
+    type_to_search: Type to search
+    unable_to_connect_to_gateway: Unable to connect to gateway.
+    under_price: Do %{price}
+    unlock: Unlock
+    unrecognized_card_type: Unrecognized card type
+    unshippable_items: Unshippable Items
+    update: Zatwierdź
+    updating: Zatwierdzanie
+    usage_limit: Wykorzystany limit
+    use_billing_address: Użyj adresu rozliczeniowego
+    use_new_cc: Użyj nowej karty
+    use_s3: Użyj Amazon S3 dla hostowania zdjęć
+    user: Użytkownik
     user_rule:
-      choose_users: 
-    users: 
+      choose_users: Wybierz użytkowników
+    users: Użytkownicy
     validation:
-      cannot_be_less_than_shipped_units: 
-      cannot_destory_line_item_as_inventory_units_have_shipped: 
-      exceeds_available_stock: 
-      is_too_large: 
-      must_be_int: 
-      must_be_non_negative: 
-    value: 
-    variant: 
-    variant_placeholder: 
-    variants: 
-    version: 
-    void: 
-    weight: 
-    what_is_a_cvv: 
-    what_is_this: 
-    width: 
-    year: 
-    you_have_no_orders_yet: 
-    your_cart_is_empty: 
-    your_order_is_empty_add_product: 
-    zip: 
-    zipcode: 
-    zone: 
-    zones: 
+      cannot_be_less_than_shipped_units: cannot be less than the number of shipped units.
+      cannot_destory_line_item_as_inventory_units_have_shipped: Cannot destory line item as some inventory units have shipped.
+      exceeds_available_stock: exceeds available stock. Please ensure line items have a valid quantity.
+      is_too_large: is too large -- stock on hand cannot cover requested quantity!
+      must_be_int: must be an integer
+      must_be_non_negative: must be a non-negative value
+    value: Wartość
+    variant: Wariant
+    variant_placeholder: Wybierz wariant
+    variants: Warianty
+    version: Wersja
+    void: Void
+    weight: Waga
+    what_is_a_cvv: What is a (CVV) Credit Card Code?
+    what_is_this: Co to jest?
+    width: Długość
+    year: Rok
+    you_have_no_orders_yet: You have no orders yet
+    your_cart_is_empty: Twój koszyk jest pusty
+    your_order_is_empty_add_product: Your order is empty, please search for and add a product above
+    zip: Kod pocztowy
+    zipcode: Kod pocztowy
+    zone: Strefa
+    zones: Strefy
