@@ -668,6 +668,7 @@ pl:
     name_or_sku: Nazwa lub SKU (wpisz przynajmniej 4 znaki nazwy produktu)
     new: Nowe
     new_adjustment: Nowa korekta
+    new_country: Nowy kraj
     new_customer: Nowy klient
     new_image: Nowe zdjęcie
     new_option_type: Nowa opcja typu
