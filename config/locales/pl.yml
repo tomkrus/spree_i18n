@@ -332,8 +332,8 @@ pl:
     all_adjustments_closed: Wszystkie korekty zostały zamknięte!
     all_adjustments_opened: Wszystkie korekty zostały otwarte!
     all_departments: Wszystkie działy
-    allow_ssl_in_development_and_test: Allow SSL to be used when in development and test modes
-    allow_ssl_in_production: Allow SSL to be used in production mode
+    allow_ssl_in_development_and_test: Wykorzystuj SSL w trybie testowym i development
+    allow_ssl_in_production: Wykorzystuj SSL w trybie produkcyjnym
     allow_ssl_in_staging: Allow SSL to be used in staging mode
     already_signed_up_for_analytics: You have already signed up for Spree Analytics
     alt_text: 'Tekst dla wartość "alt"'
@@ -1023,10 +1023,10 @@ pl:
     street_address_2: Ulica i nr domu/mieszkania (kontynuacja)
     subtotal: Podsumowanie
     subtract: Subtract
-    successfully_created: ! '%{resource} został/a poprawnie dodany/a!'
-    successfully_removed: ! '%{resource} został/a popranie usunięty/a!'
+    successfully_created: ! '%{resource} - dodano poprawnie!'
+    successfully_removed: ! '%{resource} - dane usunięto poprawnie!'
     successfully_signed_up_for_analytics: Successfully signed up for Spree Analytics
-    successfully_updated: ! '%{resource} został/a popranie poprawiony/a!'
+    successfully_updated: ! '%{resource} - dane zmieniono porawienie!'
     tax: Tax
     tax_categories: Kategorie podatku
     tax_category: Kategoria podatku
@@ -1100,7 +1100,7 @@ pl:
     what_is_this: Co to jest?
     width: Długość
     year: Rok
-    you_have_no_orders_yet: You have no orders yet
+    you_have_no_orders_yet: Nie masz jeszcze zamówień
     your_cart_is_empty: Twój koszyk jest pusty
     your_order_is_empty_add_product: Your order is empty, please search for and add a product above
     zip: Kod pocztowy
