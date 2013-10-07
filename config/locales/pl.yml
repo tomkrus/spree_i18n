@@ -229,7 +229,7 @@ pl:
       locked: Your account is locked.
       timeout: Your session expired, please sign in again to continue.
       unauthenticated: You need to sign in or sign up before continuing.
-      unconfirmed: You have to confirm your account before continuing.
+      unconfirmed: "Musisz potwierdzić swoję konto, aby kontynuować."
     mailer:
       confirmation_instructions:
         subject: Confirmation instructions
@@ -251,7 +251,7 @@ pl:
     user_registrations:
       destroyed: Bye! Your account was successfully cancelled. We hope to see you again soon.
       inactive_signed_up: You have signed up successfully. However, we could not sign you in because your account is %{reason}.
-      signed_up: Welcome! You have signed up successfully.
+      signed_up: "Witaj, konto zostało założone prawidłowo. Życzymy udanych zakupów!"
       updated: You updated your account successfully.
     user_sessions:
       signed_in: Signed in successfully.
@@ -583,7 +583,7 @@ pl:
       available_locales: Dostępne tłumaczenia
       fields: Pola
       language: Język
-      localization_settings: Localization Settings
+      localization_settings: Tłumaczenia
       only_complete: Tylko kompletne
       only_incomplete: Tylko niekompletne
       select_locale: Wybierz tłumacznie
@@ -639,7 +639,7 @@ pl:
     lock: Lock
     logged_in_as: Zalogowana/-y jako
     logged_in_succesfully: "Witaj! Zalogowałeś się poprawnie"
-    logged_out: You have been logged out.
+    logged_out: "Wylogowanie przebiegło pomyślnie. Do zobaczenia!"
     login: Zaloguj
     login_as_existing: Zaloguj się jako istniejący w bazie klient
     login_failed: Login authentication failed.
@@ -697,8 +697,8 @@ pl:
     new_zone: Nowa strefa
     next: Następna
     no_actions_added: No actions added
-    no_orders_found: No orders found
-    no_payment_methods_found: No payment methods found
+    no_orders_found: Nie znaleziono zamówień
+    no_payment_methods_found: Nie znaleziono płatności
     no_pending_payments: Brak oczekujących płatności
     no_products_found: Nie znaleziono produktów
     no_promotions_found: Nie znaleziono promocji
@@ -897,10 +897,10 @@ pl:
     registration: Registration
     remember_me: Zapamiętaj mnie
     remove: Usuń
-    rename: Rename
+    rename: Zmień nazwę
     reports: Reports
     resend: Resend
-    reset_password: Reset my password
+    reset_password: Zresetuj moja hasło
     response_code: Response Code
     resume: resume
     resumed: Resumed
@@ -932,7 +932,7 @@ pl:
     search_results: "Szukaj rezultatów dla '%{keywords}'"
     searching: Wyszukiwanie
     secure_connection_type: Secure Connection Type
-    security_settings: Security Settings
+    security_settings: Zabezpieczenia
     select: Wybierz
     select_from_prototype: Select From Prototype
     select_stock: Wybierz zasób
@@ -1047,7 +1047,7 @@ pl:
     test_mailer:
       test_email:
         greeting: Gratulacje!
-        message: If you have received this email, then your email settings are correct.
+        message: "Jeżeli widzisz ten email, to ustwienia emaila są prawidłowe."
         subject: Testowy Email
     test_mode: Test Mode
     thank_you_for_your_order: Thank you for your business.  Please print out a copy of this confirmation page for your records.
