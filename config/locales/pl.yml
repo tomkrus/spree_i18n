@@ -220,16 +220,16 @@ pl:
         other: Strefy
   devise:
     confirmations:
-      confirmed: Your account was successfully confirmed. You are now signed in.
+      confirmed: Twoje konto został poprawnie potwierdzone. Zapraszamy do zakupów w naszym sklepie.
       send_instructions: You will receive an email with instructions about how to confirm your account in a few minutes.
     failure:
       inactive: Twoje konto nie zostało jeszcze aktywowane.
       invalid: Błędny adres email lub wpisane hasło.
       invalid_token: Invalid authentication token.
-      locked: Your account is locked.
-      timeout: Your session expired, please sign in again to continue.
+      locked: Twoje konto zostało zamknięte.
+      timeout: Twoja sesja wygasła. Zaloguj się ponownie.
       unauthenticated: You need to sign in or sign up before continuing.
-      unconfirmed: "Musisz potwierdzić swoję konto, aby kontynuować."
+      unconfirmed: You have to confirm your account before continuing.
     mailer:
       confirmation_instructions:
         subject: Confirmation instructions
@@ -251,7 +251,7 @@ pl:
     user_registrations:
       destroyed: Bye! Your account was successfully cancelled. We hope to see you again soon.
       inactive_signed_up: You have signed up successfully. However, we could not sign you in because your account is %{reason}.
-      signed_up: "Witaj, konto zostało założone prawidłowo. Życzymy udanych zakupów!"
+      signed_up: Welcome! You have signed up successfully.
       updated: You updated your account successfully.
     user_sessions:
       signed_in: Signed in successfully.
@@ -332,9 +332,9 @@ pl:
     all_adjustments_closed: Wszystkie korekty zostały zamknięte!
     all_adjustments_opened: Wszystkie korekty zostały otwarte!
     all_departments: Wszystkie działy
-    allow_ssl_in_development_and_test: Wykorzystuj SSL w trybie testowym i development
-    allow_ssl_in_production: Wykorzystuj SSL w trybie produkcyjnym
-    allow_ssl_in_staging: Allow SSL to be used in staging mode
+    allow_ssl_in_development_and_test: Włącz SSL w trybie development i test
+    allow_ssl_in_production: Włącz SSL w trybie produkcyjnym
+    allow_ssl_in_staging: Włącz SSL w trybie staging
     already_signed_up_for_analytics: You have already signed up for Spree Analytics
     alt_text: 'Tekst dla wartość "alt"'
     alternative_phone: Alternatywny nr telefonu
@@ -347,8 +347,8 @@ pl:
     analytics_desc_list_4: "To jest wszystko za darmo!"
     analytics_trackers: Lokalizatory analityki
     and: i
-    are_you_sure: Jesteś tego pewny?
-    are_you_sure_delete: Are you sure you want to delete this record?
+    are_you_sure: Jesteś tego pewna/-y?
+    are_you_sure_delete: Jesteś pewna/-y, że chcesz to skasować?
     associated_adjustment_closed: The associated adjustment is closed, and will not be recalculated. Do you want to open it?
     attachment_default_style: Attachments Style
     attachment_default_url: Attachments Default URL
@@ -521,7 +521,7 @@ pl:
     email: Email
     empty: Pusty
     empty_cart: Opróżnij koszyk
-    enable_mail_delivery: Enable Mail Delivery
+    enable_mail_delivery: Włącz dostarczanie poczty
     end: Koniec
     ending_in: Ending in
     environment: Środowisko
@@ -638,17 +638,17 @@ pl:
     location: Location
     lock: Lock
     logged_in_as: Zalogowana/-y jako
-    logged_in_succesfully: "Witaj! Zalogowałeś się poprawnie"
-    logged_out: "Wylogowanie przebiegło pomyślnie. Do zobaczenia!"
-    login: Zaloguj
+    logged_in_succesfully: "Witaj! Zalogowałaś/-eś się poprawnie. Zapraszamy na zakupy!"
+    logged_out: You have been logged out.
+    login: Login
     login_as_existing: Zaloguj się jako istniejący w bazie klient
     login_failed: Login authentication failed.
     login_name: Login
     logout: Wyloguj
     look_for_similar_items: Sprawdź podobne produkty
     maestro_or_solo_cards: Maestro/Solo cards
-    mail_method_settings: Mail Method Settings
-    mail_methods: Mail Methods
+    mail_method_settings: Generalny adres E-Mail
+    mail_methods: Metody
     make_refund: Make refund
     master_price: Podstawowa cena
     match_choices:
@@ -668,7 +668,6 @@ pl:
     name_or_sku: Nazwa lub SKU (wpisz przynajmniej 4 znaki nazwy produktu)
     new: Nowe
     new_adjustment: Nowa korekta
-    new_country: Nowy kraj
     new_customer: Nowy klient
     new_image: Nowe zdjęcie
     new_option_type: Nowa opcja typu
@@ -697,8 +696,8 @@ pl:
     new_zone: Nowa strefa
     next: Następna
     no_actions_added: No actions added
-    no_orders_found: Nie znaleziono zamówień
-    no_payment_methods_found: Nie znaleziono płatności
+    no_orders_found: No orders found
+    no_payment_methods_found: No payment methods found
     no_pending_payments: Brak oczekujących płatności
     no_products_found: Nie znaleziono produktów
     no_promotions_found: Nie znaleziono promocji
@@ -897,10 +896,10 @@ pl:
     registration: Registration
     remember_me: Zapamiętaj mnie
     remove: Usuń
-    rename: Zmień nazwę
+    rename: Rename
     reports: Reports
     resend: Resend
-    reset_password: Zresetuj moja hasło
+    reset_password: Reset my password
     response_code: Response Code
     resume: resume
     resumed: Resumed
@@ -932,14 +931,14 @@ pl:
     search_results: "Szukaj rezultatów dla '%{keywords}'"
     searching: Wyszukiwanie
     secure_connection_type: Secure Connection Type
-    security_settings: Zabezpieczenia
+    security_settings: Bezpieczeństwo
     select: Wybierz
-    select_from_prototype: Select From Prototype
+    select_from_prototype: Wybierz z prototypów
     select_stock: Wybierz zasób
-    send_copy_of_all_mails_to: Send Copy of All Mails To
-    send_mails_as: Send Mails As
-    server: Server
-    server_error: The server returned an error
+    send_copy_of_all_mails_to: Wyślij kopie wszystkich maili do
+    send_mails_as: Wysyłaj maile jako
+    server: Serwer
+    server_error: Serwer zwrócił błąd
     settings: Ustawienia
     ship: ship
     ship_address: Ship Address
@@ -991,8 +990,8 @@ pl:
     smtp_mail_host: SMTP Mail Host
     smtp_password: SMTP Password
     smtp_port: SMTP Port
-    smtp_send_all_emails_as_from_following_address: Send all mails as from the following address.
-    smtp_send_copy_to_this_addresses: Sends a copy of all outgoing mails to this address. For multiple addresses, separate with commas.
+    smtp_send_all_emails_as_from_following_address: Wszystkie maile będą wysyłane pod tym adresem.
+    smtp_send_copy_to_this_addresses: Możesz wpisać wiele adresów, separatorem jest przecinek.
     smtp_username: SMTP Username
     source: Źródło
     special_instructions: Special Instructions
@@ -1023,10 +1022,10 @@ pl:
     street_address_2: Ulica i nr domu/mieszkania (kontynuacja)
     subtotal: Podsumowanie
     subtract: Subtract
-    successfully_created: ! '%{resource} - dodano poprawnie!'
-    successfully_removed: ! '%{resource} - dane usunięto poprawnie!'
+    successfully_created: ! '%{resource} został/a poprawnie dodany/a!'
+    successfully_removed: ! '%{resource} został/a popranie usunięty/a!'
     successfully_signed_up_for_analytics: Successfully signed up for Spree Analytics
-    successfully_updated: ! '%{resource} - dane zmieniono porawienie!'
+    successfully_updated: ! '%{resource} został/a popranie poprawiony/a!'
     tax: Tax
     tax_categories: Kategorie podatku
     tax_category: Kategoria podatku
@@ -1047,7 +1046,7 @@ pl:
     test_mailer:
       test_email:
         greeting: Gratulacje!
-        message: "Jeżeli widzisz ten email, to ustwienia emaila są prawidłowe."
+        message: If you have received this email, then your email settings are correct.
         subject: Testowy Email
     test_mode: Test Mode
     thank_you_for_your_order: Thank you for your business.  Please print out a copy of this confirmation page for your records.
@@ -1100,7 +1099,7 @@ pl:
     what_is_this: Co to jest?
     width: Długość
     year: Rok
-    you_have_no_orders_yet: Nie masz jeszcze zamówień
+    you_have_no_orders_yet: You have no orders yet
     your_cart_is_empty: Twój koszyk jest pusty
     your_order_is_empty_add_product: Your order is empty, please search for and add a product above
     zip: Kod pocztowy
