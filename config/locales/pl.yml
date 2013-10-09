@@ -639,7 +639,7 @@ pl:
     lock: Lock
     logged_in_as: Zalogowana/-y jako
     logged_in_succesfully: "Witaj! Zalogowałaś/-eś się poprawnie. Zapraszamy na zakupy!"
-    logged_out: You have been logged out.
+    logged_out: "Wylogowanie przebiegło pomyślnie. Do zobaczenia!"
     login: Login
     login_as_existing: Zaloguj się jako istniejący w bazie klient
     login_failed: Login authentication failed.
@@ -668,6 +668,7 @@ pl:
     name_or_sku: Nazwa lub SKU (wpisz przynajmniej 4 znaki nazwy produktu)
     new: Nowe
     new_adjustment: Nowa korekta
+    new_country: Nowy kraj
     new_customer: Nowy klient
     new_image: Nowe zdjęcie
     new_option_type: Nowa opcja typu
@@ -696,8 +697,8 @@ pl:
     new_zone: Nowa strefa
     next: Następna
     no_actions_added: No actions added
-    no_orders_found: No orders found
-    no_payment_methods_found: No payment methods found
+    no_orders_found: Nie znaleziono zamówień
+    no_payment_methods_found: Nie znaleziono płatności
     no_pending_payments: Brak oczekujących płatności
     no_products_found: Nie znaleziono produktów
     no_promotions_found: Nie znaleziono promocji
@@ -896,10 +897,10 @@ pl:
     registration: Registration
     remember_me: Zapamiętaj mnie
     remove: Usuń
-    rename: Rename
+    rename: Zmień nazwę
     reports: Reports
     resend: Resend
-    reset_password: Reset my password
+    reset_password: Zresetuj moje hasło
     response_code: Response Code
     resume: resume
     resumed: Resumed
@@ -1022,10 +1023,10 @@ pl:
     street_address_2: Ulica i nr domu/mieszkania (kontynuacja)
     subtotal: Podsumowanie
     subtract: Subtract
-    successfully_created: ! '%{resource} został/a poprawnie dodany/a!'
-    successfully_removed: ! '%{resource} został/a popranie usunięty/a!'
+    successfully_created: ! '%{resource} - dodano poprawnie!'
+    successfully_removed: ! '%{resource} - dane usunięto poprawnie!'
     successfully_signed_up_for_analytics: Successfully signed up for Spree Analytics
-    successfully_updated: ! '%{resource} został/a popranie poprawiony/a!'
+    successfully_updated: ! '%{resource} - dane zmieniono porawienie!'
     tax: Tax
     tax_categories: Kategorie podatku
     tax_category: Kategoria podatku
@@ -1046,7 +1047,7 @@ pl:
     test_mailer:
       test_email:
         greeting: Gratulacje!
-        message: If you have received this email, then your email settings are correct.
+        message: "Jeżeli widzisz ten email, to ustwienia emaila są prawidłowe."
         subject: Testowy Email
     test_mode: Test Mode
     thank_you_for_your_order: Thank you for your business.  Please print out a copy of this confirmation page for your records.
@@ -1099,7 +1100,7 @@ pl:
     what_is_this: Co to jest?
     width: Długość
     year: Rok
-    you_have_no_orders_yet: You have no orders yet
+    you_have_no_orders_yet: Nie masz jeszcze zamówień
     your_cart_is_empty: Twój koszyk jest pusty
     your_order_is_empty_add_product: Your order is empty, please search for and add a product above
     zip: Kod pocztowy
