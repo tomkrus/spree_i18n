@@ -149,6 +149,9 @@ pl:
       spree/line_item:
         one: Line Item
         other: Line Items
+      spree/option_type:
+        one: Opcja typu
+        other: Opcje typów
       spree/order:
         one: Zamówienie
         other: Zamówienia
@@ -491,7 +494,7 @@ pl:
     default_seo_title: Domyślne Seo Title
     default_tax: Domyślny podatek
     default_tax_zone: Domyślna strefa podatkowa
-    delete: Delete
+    delete: Usuń
     delivery: Wysyłka
     depth: Depth
     description: Opis
@@ -697,7 +700,6 @@ pl:
     new_zone: Nowa strefa
     next: Następna
     no_actions_added: No actions added
-    no_images_found: Brak zdjęć
     no_orders_found: Nie znaleziono zamówień
     no_payment_methods_found: Nie znaleziono płatności
     no_pending_payments: Brak oczekujących płatności
